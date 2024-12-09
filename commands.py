@@ -3,7 +3,8 @@ from pyrx_imp import Ap, Db, Ed, Ge, Gi, Gs, Rx, Bim
 
 from helper import helper
 
-print("added command - test")
+print("added command - bct_test")
+print("added command - bct_reloadmodules")
 
 # On PYRELOAD reload all used custom modules
 def OnPyReload() -> None:
