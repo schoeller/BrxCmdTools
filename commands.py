@@ -23,6 +23,6 @@ def PyRxCmd_bct_test():
 
 def PyRxCmd_bct_reloadmodules():
     try:
-        #TODO: initialize OnPyReload on commands
+        print("#TODO: initialize OnPyReload on commands")
     except Exception as err:
         print(err)

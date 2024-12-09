@@ -25,7 +25,11 @@ def initonload():
         fname = os.path.join(os.getenv('LOCALAPPDATA'), "Programs", "PyRx", "Bin", "pyrx_onload.py")
         print(fname)
 
-        if str_find(fname, REPO_NAME):
+        if not os.path.exists(fname):
+            with open(fname, 'w', encoding='utf-8') as f:
+                f.write(initstring.replace("\\", "/") + '\n')
+                print("Configuration file created.")
+        elif str_find(fname, REPO_NAME):
             print("Configuration already exists.")
         else:
             with open(fname, 'a', encoding='utf-8') as f:
