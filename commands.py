@@ -8,7 +8,6 @@ print("added command - bct_test")
 print("added command - bct_reloadmodules")
 print("added command - bct_repoupdate")
 
-# On PYRELOAD reload all used custom modules
 def OnPyReload() -> None:
     try:
         import importlib
