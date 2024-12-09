@@ -12,8 +12,10 @@ A testbed for functions based on PyRx for use with Bricscad
 
 `import sys; import subprocess; subprocess.call([sys.exec_prefix + '/python', "-m", 'pip', 'install', 'dulwich'])`
 
-4# Initialize the installation and configuration from remote
+4# Start BCAD and Enter `_PYCMDPROMT`
 
-`exec(requests.get("https://raw.githubusercontent.com/schoeller/BrxCmdTools/refs/heads/main/helper/initialize.py").text)`
+5# Initialize the installation and configuration from remote
 
-5# Restart BCAD and open a DWG. Type `_BCT_test` on the prompt
+`import requests; exec(requests.get("https://raw.githubusercontent.com/schoeller/BrxCmdTools/refs/heads/main/helper/initialize.py").text)`
+
+6# Restart BCAD and open a DWG. Type `_BCT_test` on the prompt
