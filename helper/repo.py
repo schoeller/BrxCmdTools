@@ -27,7 +27,7 @@ def check_for_updates():
 
     # Check if the local repository exists
     if not os.path.exists(local_repo_path):
-        print(f"The local repository '{repo_name}' does not exist.")
+        print(f"The local repository '{REPO_NAME}' does not exist.")
         return
 
     try:
