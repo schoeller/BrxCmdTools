@@ -5,6 +5,7 @@ from helper import helper
 from helper import repo
 
 print("added command - bct_reloadcommands")
+print("added command - bct_repodiffs")
 print("added command - bct_repoupdate")
 
 def OnPyReload() -> None:
@@ -20,6 +21,12 @@ def PyRxCmd_bct_reloadcommands():
     try:
         helper.reload_commands()
         print("#TODO: initialize OnPyReload on commands")
+    except Exception as err:
+        print(err)
+
+def PyRxCmd_bct_repodiffs():
+    try:
+        repo.check_for_updates()
     except Exception as err:
         print(err)
 
