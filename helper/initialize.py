@@ -18,7 +18,7 @@ def initonload():
     try:
         initstring = (
             "from pyrx_imp import Rx, Ge, Gi, Db, Ap, Ed\n\n"
-            "def OnPyInitApp() -> None:\n"
+            "def OnPyInitDwg() -> None:\n"
             f"    Ap.Application.loadPythonModule(\"{os.path.join(os.getenv('APPDATA'), REPO_NAME, 'commands.py')}\")\n"
             "    print('Loading BrxCmdTools')"
         )
