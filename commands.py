@@ -9,6 +9,7 @@ from script import bct_ifcbatchconversion
 from script import bct_exportplxy
 from script import bct_layerimportexport
 from script import bct_osmtin
+from script import bct_demtin
 
 print("added command - bct_reloadcommands")
 print("added command - bct_repodiffs")
@@ -20,6 +21,7 @@ print("added command - bct_exportplxy")
 print("added command - bct_layerimport")
 print("added command - bct_layerexport")
 print("added command - bct_getosmtin")
+print("added command - bct_getdemtin")
 
 def OnPyReload() -> None:
     try:
@@ -91,4 +93,8 @@ def PyRxCmd_bct_osm4tin():
     except Exception as err:
         print(err)
 
-cvgetosmtin
+def PyRxCmd_bct_getdemtin():
+    try:
+        bct_demtin.cvgetdemtin()
+    except Exception as err:
+        print(err)
