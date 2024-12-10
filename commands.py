@@ -4,11 +4,13 @@ from pyrx_imp import Ap, Db, Ed, Ge, Gi, Gs, Rx, Bim
 from helper import helper
 from helper import repo
 from script import bct_create_bfr_symbol_styles
+from script import bct_mcadbim_syncattr
 
 print("added command - bct_reloadcommands")
 print("added command - bct_repodiffs")
 print("added command - bct_repoupdate")
 print("added command - bct_bfrsymbolstyles")
+print("added command - bct_mcadbim_syncattr")
 
 def OnPyReload() -> None:
     try:
@@ -41,5 +43,11 @@ def PyRxCmd_bct_repoupdate():
 def PyRxCmd_bct_bfrsymbolstyles():
     try:
         bct_create_bfr_symbol_styles.cv_create_bfr_symbol_styles()
+    except Exception as err:
+        print(err)
+
+def PyRxCmd_bct_mcadbim_attsync():
+    try:
+        bct_mcadbim_syncattr.mcadbim_attsync()
     except Exception as err:
         print(err)
