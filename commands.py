@@ -7,6 +7,7 @@ from script import bct_create_bfr_symbol_styles
 from script import bct_mcadbim_syncattr
 from script import bct_ifcbatchconversion
 from script import bct_exportplxy
+from script import bct_layerimportexport
 
 print("added command - bct_reloadcommands")
 print("added command - bct_repodiffs")
@@ -15,6 +16,8 @@ print("added command - bct_bfrsymbolstyles")
 print("added command - bct_mcadbim_syncattr")
 print("added command - bct_ifcbatchconversion")
 print("added command - bct_exportplxy")
+print("added command - bct_layerimport")
+print("added command - bct_layerexport")
 
 def OnPyReload() -> None:
     try:
@@ -65,5 +68,17 @@ def PyRxCmd_bct_ifcbatchconversion():
 def PyRxCmd_bct_ifcbatchconversion():
     try:
         bct_exportplxy.py_samplepolylinexy()
+    except Exception as err:
+        print(err)
+
+def PyRxCmd_bct_layerimport():
+    try:
+        bct_layerimportexport.py_layerimport()
+    except Exception as err:
+        print(err)
+
+def PyRxCmd_bct_layerexport():
+    try:
+        bct_layerimportexport.py_layerexport()
     except Exception as err:
         print(err)
