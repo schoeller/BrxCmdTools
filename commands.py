@@ -34,8 +34,8 @@ def OnPyReload() -> None:
 
 def PyRxCmd_bct_reloadcommands():
     try:
-        helper.reload_commands()
-        print("#TODO: initialize OnPyReload on commands")
+        for modulePath in Ap.Application.getLoadedModules():
+            Ap.Application.reloadPythonModule(modulePath)
     except Exception as err:
         print(err)
 
