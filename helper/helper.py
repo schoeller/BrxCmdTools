@@ -1,11 +1,10 @@
 import traceback
+import os
 from pyrx_imp import Ap, Db, Ed, Ge, Gi, Gs, Rx, Bim
-#import repo
 
-def reload_commands():
-    try:
-        # print(repo.get_repo_dir())
-        print("ups")
+# def reload_commands():
+#     try:
+#         Ap.Application.reloadPythonModule({os.path.join(os.getenv('APPDATA'), REPO_NAME, 'commands.py')})
 
-    except Exception as e:
-        print(f"Error displaying changes: {e}")
+#     except Exception as e:
+#         print(f"Error displaying changes: {e}")
