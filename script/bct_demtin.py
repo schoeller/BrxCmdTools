@@ -12,10 +12,10 @@ import gemgis as gg
 # https://github.com/ACCESS-Cloud-Based-InSAR/dem-stitcher
 
 def getGeoDataId(db: Db.Database) -> Db.ObjectId:
-if not Db.Core.hasGeoData(db):
-    data = Db.GeoData()
-    data.setBlockTableRecordId(db.modelSpaceId())
-    return data.postToDb()
+    if not Db.Core.hasGeoData(db):
+        data = Db.GeoData()
+        data.setBlockTableRecordId(db.modelSpaceId())
+        return data.postToDb()
 return Db.Core.getGeoDataObjId(db)
 
 def getLocation(location):
